@@ -14,13 +14,6 @@ except ValueError:
     exit(code=246)
 
 
-'''
-chicago = maps_client.geocode('Chicago, IL, USA')[0]
-geom = chicago['geometry']
-location = geom['location']
-place_id = chicago['place_id']
-'''
-
 # the cycle
 location = {'lat': 41.8781136, 'lng': -87.6297982}
 next_token = 'first_page'
