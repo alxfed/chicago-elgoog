@@ -11,16 +11,17 @@ token = os.environ['API_TOKEN']
 #with urllib.request.urlopen('https://maps.googleapis.com/maps/api/place/textsearch/json?query=McDonald\'s+Chicago&fields=formatted_address,name&key='+token) as url:
 #    data = json.loads(url.read().decode())
 
+property_name = '100 Forest Place, Oak Park, IL'
 
-#r = requests.get(url='https://maps.googleapis.com/maps/api/place/findplacefromtext/json?query=McDonald\'s%20&key=token&radius=50000')
 
-# r = requests.get(url='https://maps.googleapis.com/maps/api/place/radarsearch/json?input=McDonald\'s&inputtype=textquery&fields=formatted_address,name&locationbias=circle:50000@41.8312844,-87.6073018&key='+token)
-# r2 = requests.get(url='https://maps.googleapis.com/maps/api/place/findplacefromtext/json?query=McDonald\'s%20&key=token&radius=50000')
+r = requests.get(url='https://maps.googleapis.com/maps/api/place/findplacefromtext/json?query=100+Forest+Place+Oak+Park+IL%20&key=token')
+
+# # r2 = requests.get(url='https://maps.googleapis.com/maps/api/place/findplacefromtext/json?query=McDonald\'s%20&key=token&radius=50000')
 
 # https://maps.googleapis.com/maps/api/place/radarsearch/output?parameters
 
 
-r3 = requests.get(url='https://maps.googleapis.com/maps/api/place/textsearch/json?query=McDonald\'s+Chicago&key='+token)
+# r3 = requests.get(url='https://maps.googleapis.com/maps/api/place/textsearch/json?query=McDonald\'s+Chicago&key='+token)
 
 '''
 Google API fetches the 20 Result in one page suppose you want to use the next page 20 result then we use the next_page_token from google first page xml as a result.

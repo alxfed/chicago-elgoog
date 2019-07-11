@@ -23,7 +23,7 @@ while next_token:
     if next_token.startswith('first_page'):
         result = maps_client.places(query="McDonald's",
                                         location=location,
-                                        radius=50000)
+                                        radius=2000)
         results = result['results']
         next_token = result.get('next_page_token')
         time.sleep(2)
