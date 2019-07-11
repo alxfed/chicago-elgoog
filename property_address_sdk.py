@@ -3,8 +3,8 @@ import os
 import time
 
 token = os.environ['API_TOKEN']
-addre = '118-122 West 23rd Street'
-neigh = 'New York, NY'
+addre = 'Twin Lake Towers'
+neigh = 'Westmont, IL'
 
 try:
     maps_client = googlemaps.Client(key=token, timeout=10,
@@ -35,10 +35,12 @@ place_id = results['place_id']
 bias = 'circle:50000@'+str(location['lat'])+','+str(location['lng'])
 result = maps_client.find_place(input=addre,
                                 input_type="textquery",
-                                fields=['formatted_address', 'name', 'place_id'],
+                                fields=['formatted_address', 'name', 'place_id', 'geometry'],
                                 location_bias=bias)
 info = result['candidates'][0]
 address = info['formatted_address']
 name = info['name']
+lat = info['geometry']['location']['lat']
+lng = info['geometry']['location']['lng']
 id = info['place_id']
 print(results)
