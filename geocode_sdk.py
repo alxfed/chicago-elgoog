@@ -19,6 +19,8 @@ geom = chicago['geometry']
 location = geom['location']
 place_id = chicago['place_id']
 
+pass
+
 time.sleep(2)
 '''
 
